@@ -14,7 +14,7 @@ con=0
 conection=smtplib.SMTP('smtp.gmail.com',587)
 conection.ehlo()
 conection.starttls()
-conection.login("nagendrakamati00@gmail.com","9010095353")
+conection.login("email","password")
 name="moment detected on plz check your cctv photage "
 names=name+str(s)
 cap = cv2.VideoCapture('Chroma Key Studio Handsome Businessman Wearing Suit Uses Sma.avi')
@@ -46,7 +46,7 @@ while cap.isOpened():
         cv2.putText(frame1, "Status: {}".format('Movement'), (10, 20), cv2.FONT_HERSHEY_SIMPLEX,
                     1, (0, 0, 255), 3)
         if con==0:
-            conection.sendmail("nagendrakamati00@gmail.com", "rocknagendrakamati@gmail.com", name)
+            conection.sendmail("from mail", "to mail", name)
             con=con+1
         else:
             pass
